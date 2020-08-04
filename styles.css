@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'colaborate-regularregular';
+    src: url('polices/colaborate_regular_macroman/ColabReg-webfont.eot');
+    src: url('polices/colaborate_regular_macroman/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/colaborate_regular_macroman/ColabReg-webfont.woff2') format('woff2'),
+         url('polices/colaborate_regular_macroman/ColabReg-webfont.woff') format('woff'),
+         url('polices/colaborate_regular_macroman/ColabReg-webfont.ttf') format('truetype'),
+         url('polices/colaborate_regular_macroman/ColabReg-webfont.svg#colaborate-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* propriétés sur toutes la page */
+body{
+    font-family: 'colaborate-regularregular';
+    width: 60%;
+    display:flex;
+    margin: auto;
+}
+
+/* Propriétés sur le coté gauche (aside) dans leur ordre d'apparition */
+aside{
+    background-color: #3F51B5;
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+}  
+
+aside p {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.photo-profil{
+    display:flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom:1.5em ;
+}
+
+.photo{
+    border: 3px solid #1A237E;
+    width: 200px;
+    line-height: 200px;
+    height: 200px;
+    border-radius: 100px;
+   /* overflow: hidden;*/
+}
+
+h3{
+    background-color:#263238;
+    display: flex;
+    justify-content: center;
+    color : #3F51B5;
+    font-size: 1.5em;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.a-propos{
+    flex-grow: 1;
+}
+
+.a-propos p{
+    display: flex;
+    text-align: justify;
+}
+
+.bloc-loisirs{
+    display:flex;
+    justify-content: space-around;
+    padding-right: 1em; 
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+}
+
+.emote-loisirs{
+    border: 1px solid black;
+    /*
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    */
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.3em;
+}
+
+/* Titre */
+h1{
+    font-size: 5em;
+    margin-bottom: 0;
+}
+
+.prenom{
+    color: #3F51B5
+}
+
+.developpeur{
+    display:flex;
+    margin-bottom:2.5em;
+}
+
+.devel{
+    display:flex;
+    text-decoration: underline #3F51B5 ;
+}
+
+/* Partie principale */
+.tronc{
+    display:flex;
+    flex-direction: column;
+    padding-left: 3em;
+    padding-right: 2em;
+}
+
+mark{
+    background-color: white;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+header{
+    display:flex;
+    border-bottom: solid 3px #3F51B5 ;
+    padding-bottom: 0;
+    margin-bottom: 1.5em;
+}
+
+.emote-titre{
+    color:#3F51B5;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.puce{
+    display: flex;
+    color:#3F51B5;
+    padding-top: 1em;
+    padding-right: 0.5em;
+}
+.formation{
+    display: flex;
+}
+
+.texte-formation{
+    width: 100%;
+    text-align: justify;
+}
+
+.date-formation{
+    display: flex;
+    width: 25%;
+}
+
+.experience{
+    display: flex;
+    text-align: justify;
+}
+
+.date-experience{
+    box-sizing: border-box;
+    display: flex;
+    width: 25%;
+}
+
+.texte-experience{
+    width: 100%;
+}
+
+.recommandations{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10em;
+}
+
+.recommandations p{
+    margin:0;
+}
+
+.gras{
+    font-weight: bold;
+}
+
+@media screen and (max-width:1420px){
+    .recommandations{
+        padding-right: 1em;
+    }
+}
+
+@media screen and (max-width:1170px){
+    body{
+        display: inline;
+        width: 100%;
+        font-size: 0.7em;
+    }
+    aside{
+        width: auto;
+    }
+    .tronc{
+        width: auto;
+        box-sizing: border-box;
+    }
+   
+}
+
+@media screen and (max-width:490px){
+    ul{
+       display: flex;
+       flex-direction: column;
+    }
+   li{
+       margin-bottom: 1em;
+   }
+}
