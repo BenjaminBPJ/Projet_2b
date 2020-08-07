@@ -13,15 +13,65 @@
 /* propriétés sur toutes la page */
 body{
     font-family: 'colaborate-regularregular';
+    font-size: 0.7em;
+    flex-direction: column;
     width: 60%;
     display:flex;
     margin: auto;
+    max-width: 1200px;
+}
+
+/*Photo et Nom/Prenom */
+.titre-principal{
+    display: flex;
+    width: 100%;
+}
+.photo-profil{
+    background-color: #3F51B5;
+    display: flex;
+    justify-content: center;
+    max-width: 255px;
+}
+
+.photo{
+    border: 3px solid #1A237E;
+    border-radius: 50%;
+    margin: 2em;
+    height: 20em;
+    overflow: hidden;
+}
+
+.name{
+    padding-left: 3em;
+}
+
+h1{
+    font-size: 4.5em;
+    margin-bottom: 0;
+}
+
+.prenom{
+    color: #3F51B5
+}
+
+.developpeur{
+    display:flex;
+    margin-bottom:2.5em;
+}
+
+.devel{
+    display:flex;
+    text-decoration: underline #3F51B5 ;
 }
 
 /* Propriétés sur le coté gauche (aside) dans leur ordre d'apparition */
+main{
+    display: flex;
+}
 aside{
     background-color: #3F51B5;
     width: 30%;
+    max-width: 255px;
     display:flex;
     flex-direction: column;
 }  
@@ -29,22 +79,6 @@ aside{
 aside p {
     padding-left: 1.5em;
     padding-right: 1.5em;
-}
-
-.photo-profil{
-    display:flex;
-    justify-content: center;
-    margin-top: 3em;
-    margin-bottom:1.5em ;
-}
-
-.photo{
-    border: 3px solid #1A237E;
-    width: 200px;
-    line-height: 200px;
-    height: 200px;
-    border-radius: 100px;
-   /* overflow: hidden;*/
 }
 
 h3{
@@ -79,34 +113,9 @@ a{
 
 .emote-loisirs{
     border: 1px solid black;
-    /*
-    width: 50px;
-    line-height: 50px;
-    height: 50px;
-    */
     border-radius: 50%;
     text-align: center;
     padding: 0.3em;
-}
-
-/* Titre */
-h1{
-    font-size: 5em;
-    margin-bottom: 0;
-}
-
-.prenom{
-    color: #3F51B5
-}
-
-.developpeur{
-    display:flex;
-    margin-bottom:2.5em;
-}
-
-.devel{
-    display:flex;
-    text-decoration: underline #3F51B5 ;
 }
 
 /* Partie principale */
@@ -127,7 +136,7 @@ ul{
     padding:0;
 }
 
-header{
+.titre-article{
     display:flex;
     border-bottom: solid 3px #3F51B5 ;
     padding-bottom: 0;
@@ -172,7 +181,6 @@ article{
 }
 
 .date-experience{
-    box-sizing: border-box;
     display: flex;
     width: 25%;
 }
@@ -195,34 +203,67 @@ article{
     font-weight: bold;
 }
 
-@media screen and (max-width:1420px){
-    .recommandations{
-        padding-right: 1em;
-    }
-}
 
 @media screen and (max-width:1170px){
     body{
-        display: inline;
         width: 100%;
-        font-size: 0.7em;
     }
     aside{
         width: auto;
     }
-    .tronc{
-        width: auto;
-        box-sizing: border-box;
+}
+
+@media screen and (min-width:990px){
+    aside{
+        min-width: 255px;
     }
-   
+}
+
+@media screen and (max-width:715px){
+    .titre-principal{
+        display: block;
+    }
+    main{
+        display: block;
+    }
+    aside{
+        max-width: 100%;
+    }
+    .photo-profil{
+        margin: auto;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width:490px){
-    ul{
-       display: flex;
-       flex-direction: column;
+    body{
+        font-size: 0.65em;
     }
-   li{
-       margin-bottom: 1em;
-   }
+    .photo-profil{
+        margin: auto;
+    }
+    .tronc{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .experience, .formation{
+       display: flex;
+    }
+
+    .puce{
+       display: none;
+    }
+    .date{
+       color: #3F51B5;
+       font-weight: bold;
+    }
+    .recommandations{
+        display: flex;
+        flex-direction: column;
+    }
+    .lirec{
+        margin-bottom: 2em;
+    }
 }
