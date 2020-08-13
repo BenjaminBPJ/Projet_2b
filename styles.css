@@ -65,7 +65,7 @@ h1{
 }
 
 /* Propriétés sur le coté gauche (aside) dans leur ordre d'apparition */
-main{
+.main-content{
     display: flex;
 }
 aside{
