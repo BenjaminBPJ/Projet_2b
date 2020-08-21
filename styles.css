@@ -2,7 +2,6 @@
     font-family: 'colaborate-regularregular';
     src: url('polices/colaborate_regular_macroman/ColabReg-webfont.eot');
     src: url('polices/colaborate_regular_macroman/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('polices/colaborate_regular_macroman/ColabReg-webfont.woff2') format('woff2'),
          url('polices/colaborate_regular_macroman/ColabReg-webfont.woff') format('woff'),
          url('polices/colaborate_regular_macroman/ColabReg-webfont.ttf') format('truetype'),
          url('polices/colaborate_regular_macroman/ColabReg-webfont.svg#colaborate-regularregular') format('svg');
@@ -13,12 +12,9 @@
 /* propriétés sur toutes la page */
 body{
     font-family: 'colaborate-regularregular';
-    font-size: 0.7em;
     flex-direction: column;
-    width: 60%;
     display:flex;
-    margin: auto;
-    max-width: 1200px;
+    margin:auto;
 }
 
 /*Photo et Nom/Prenom */
@@ -30,19 +26,17 @@ body{
     background-color: #3F51B5;
     display: flex;
     justify-content: center;
-    max-width: 255px;
 }
 
 .photo{
     border: 3px solid #1A237E;
     border-radius: 50%;
     margin: 2em;
-    height: 20em;
-    overflow: hidden;
 }
 
 .name{
     padding-left: 3em;
+    width: 100%;
 }
 
 h1{
@@ -67,13 +61,14 @@ h1{
 /* Propriétés sur le coté gauche (aside) dans leur ordre d'apparition */
 .main-content{
     display: flex;
+    width: 100%;
 }
 aside{
     background-color: #3F51B5;
-    width: 30%;
-    max-width: 255px;
     display:flex;
     flex-direction: column;
+    max-width: 262px;
+    min-width: 262px;
 }  
 
 aside p {
@@ -124,6 +119,7 @@ a{
     flex-direction: column;
     padding-left: 3em;
     padding-right: 2em;
+    width:100%;
 }
 
 mark{
@@ -161,6 +157,7 @@ article{
     padding-top: 1em;
     padding-right: 0.5em;
 }
+
 .formation{
     display: flex;
 }
@@ -192,7 +189,7 @@ article{
 .recommandations{
     display: flex;
     justify-content: space-between;
-    padding-right: 10em;
+    padding-right: 30em;
 }
 
 .recommandations p{
@@ -203,49 +200,46 @@ article{
     font-weight: bold;
 }
 
+@media screen and (max-width:1215px){
+    aside{
+        min-width: 262px;
+    }
+    .recommandations{
+        padding-right: 0 ;
+    }
+}
 
-@media screen and (max-width:1170px){
+@media screen and (max-width:900px){
+    .recommandations{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:720px){
     body{
-        width: 100%;
-    }
-    aside{
-        width: auto;
-    }
-}
-
-@media screen and (min-width:990px){
-    aside{
-        min-width: 255px;
-    }
-}
-
-@media screen and (max-width:715px){
-    .titre-principal{
+        font-size: 0.65em;
         display: block;
     }
     .main-content{
         display: block;
+        width: auto;
+    }
+    .titre-principal{
+        display: block;
+    }
+    .name{
+        width: auto;
     }
     aside{
-        max-width: 100%;
-    }
-    .photo-profil{
-        margin: auto;
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width:490px){
-    body{
-        font-size: 0.65em;
-    }
-    .photo-profil{
-        margin: auto;
+        display: block;
+        max-width: none;
     }
     .tronc{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: auto;
     }
 
     .experience, .formation{
@@ -259,11 +253,20 @@ article{
        color: #3F51B5;
        font-weight: bold;
     }
+
+    .lirec{
+        margin-bottom: 2em;
+    }
+    .recommandations{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:490px){
+
     .recommandations{
         display: flex;
         flex-direction: column;
-    }
-    .lirec{
-        margin-bottom: 2em;
     }
 }
